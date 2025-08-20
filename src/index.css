@@ -1,0 +1,33 @@
+/* Ensure full height on root elements */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Make the main container a flex column */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Let main content grow */
+.main-content-home {
+  flex: 1;
+}
+
+/* Footer styling */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 16px;
+}
+
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}
