@@ -1,0 +1,184 @@
+.tracking-container {
+  padding: 2rem;
+}
+
+.order-date-title {
+  margin-top: 2rem;
+  font-size: 1.25rem;
+  color: #333;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.5rem;
+}
+
+.tracking-card {
+  display: flex;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.tracking-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-right: 1rem;
+}
+
+.tracking-details {
+  flex: 1;
+}
+
+.status {
+  margin-top: 8px;
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  color: white;
+}
+
+.status.delivered {
+  background-color: #4caf50;
+}
+
+.status.transit {
+  background-color: #ff9800;
+}
+
+.status.transit {
+  background-color: orange; /* or use #FFA500 for a hex value */
+  color: white;
+}
+
+.status-bar {
+  margin-top: 1.5rem;
+  position: relative;
+}
+
+.progress-line {
+  height: 4px;
+  background-color: #ccc;
+  position: relative;
+  margin: 20px 0;
+  border-radius: 4px;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #4caf50;
+  border-radius: 4px;
+  transition: width 0.4s ease;
+}
+
+.status-steps {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  top: -12px;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  font-size: 0.75rem;
+  color: #999;
+}
+
+.step.active {
+  color: #4caf50;
+  font-weight: 600;
+}
+
+.step-icon {
+  width: 24px;
+  height: 24px;
+  background-color: #ccc;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+  font-size: 0.85rem;
+}
+
+.step.active1 .step-icon {
+  background-color: #4caf50;
+}
+
+
+@media (max-width: 768px) {
+  .tracking-container {
+    padding: 1rem;
+  }
+
+  .tracking-card {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .tracking-card img {
+    margin-right: 0;
+    margin-bottom: 10px;
+    width: 80px;
+    height: 80px;
+  }
+
+  .tracking-details {
+    width: 100%;
+  }
+
+  .order-date-title {
+    font-size: 1.1rem;
+  }
+
+  .status {
+    font-size: 0.8rem;
+    padding: 4px 10px;
+  }
+
+  .progress-line {
+    margin: 15px 0;
+  }
+
+  .step {
+    font-size: 0.65rem;
+  }
+
+  .step-icon {
+    width: 20px;
+    height: 20px;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .order-date-title {
+    font-size: 1rem;
+  }
+
+  .tracking-card {
+    padding: 0.8rem;
+  }
+
+  .step {
+    font-size: 0.6rem;
+  }
+
+  .step-icon {
+    width: 18px;
+    height: 18px;
+    font-size: 0.7rem;
+  }
+
+  .status-steps {
+    top: -10px;
+  }
+}

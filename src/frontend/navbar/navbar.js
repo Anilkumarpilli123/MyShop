@@ -160,7 +160,7 @@ const handleSignupSubmit = async (e) => {
   const errors = validateSignup();
   if (Object.keys(errors).length === 0) {
     try {
-      const response = await fetch(`${API_BASE_URL}/api/auth/signup`, {
+      const response = await fetch("http://localhost:5001/api/auth/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(signupData),
