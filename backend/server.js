@@ -15,10 +15,10 @@ const PORT = process.env.PORT || 5001;
 // ✅ Middleware first
 app.use(cors({
   origin: [
-    "http://localhost:3000", 
-    "https://myshop-couj.onrender.com",   // your backend
-    "https://myshop-frontend-slb4.onrender.com" // your frontend
+    "http://localhost:3000",                  // for local testing
+    "https://myshop-frontend-slb4.onrender.com" // your deployed frontend
   ],
+  methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
 app.use(express.json());
