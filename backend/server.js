@@ -13,7 +13,10 @@ const app = express();
 const PORT = process.env.PORT || 5001;
 
 // ✅ Middleware first
-app.use(cors());
+app.use(cors({
+  origin: ["http://localhost:3000", "https://myshop-couj.onrender.com"],
+  credentials: true
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
